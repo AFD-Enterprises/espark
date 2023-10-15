@@ -1,52 +1,47 @@
 import React from 'react';
-import './button.css';
+import '@material/web/button/filled-button.js';
+import '@material/web/button/outlined-button.js';
+
+declare global {
+  namespace JSX {
+    interface IntrinsicElements {
+      'md-filled-button': React.DetailedHTMLProps<
+        React.HTMLAttributes<HTMLElement>,
+        HTMLElement
+      >;
+    }
+  }
+}
 
 interface ButtonProps {
-  /**
-   * Is this the principal call to action on the page?
-   */
-  primary?: boolean;
   /**
    * What background color to use
    */
   backgroundColor?: string;
+
   /**
-   * How large should the button be?
+   * Button type
    */
-  size?: 'small' | 'medium' | 'large';
+  type?: 'filled' | 'outlined' | 'elevated' | 'filled-tonal';
+
   /**
    * Button contents
    */
   label: string;
-  /**
-   * Optional click handler
-   */
-  onClick?: () => void;
 }
 
 /**
  * Primary UI component for user interaction
  */
 export const Button = ({
-  primary = false,
-  size = 'medium',
+  type = 'filled',
   backgroundColor,
   label,
   ...props
 }: ButtonProps) => {
-  const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
   return (
-    <button
-      type="button"
-      className={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
-      {...props}
-    >
-      {label}
-      <style jsx>{`
-        button {
-          background-color: ${backgroundColor};
-        }
-      `}</style>
-    </button>
+    <>
+      <md-filled-button>Hello</md-filled-button>
+    </>
   );
 };
