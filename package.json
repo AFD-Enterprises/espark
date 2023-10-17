@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "@mui/icons-material": "^5.14.14",
+    "@mui/material": "^5.14.14",
+    "@weknow/react-bubble-chart-d3": "^1.0.12",
+    "chroma-js": "^2.4.2",
+    "next": "^13.5.4",
+    "react-bubble-ui": "^1.1.2",
+    "react-material-ui-carousel": "^3.4.2"
+  }
+}
