@@ -5,7 +5,6 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import {Button} from './Button'
 import "react-bubble-ui/dist/index.css";
-import BubbleChart from "@weknow/react-bubble-chart-d3";
 
 interface TabPanelProps {
   children?: React.ReactNode;
