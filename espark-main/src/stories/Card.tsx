@@ -40,8 +40,8 @@ export default function MediaCard({name,source,children}:MediaCardProps) {
       <CardActions>
       </CardActions>
    
-      <Button type='outlined'  label='test' action={async()=>{console.log("test")}} /> 
-      <Button type='filled'  label='test' action={async()=>{console.log("test")}} />
+      <Button type='outlined'  label='View' action={async()=>{console.log("test")}} /> 
+      <Button type='filled'  label='Save' action={async()=>{console.log("test")}} />
    
     </Card>
   );
